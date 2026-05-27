@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IsletTwin Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <p class="eyebrow">A digital twin of stem cell-derived islet differentiation</p>
+        <h1>IsletTwin Explorer</h1>
+        <p class="subtitle">Developed by Ed Sanchez-Castro</p>
+      </div>
+      <div class="header-umap" aria-live="polite">
+        <img id="rotatingUmapImage" alt="" />
+        <span id="rotatingUmapLabel">DT UMAP</span>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Explorer sections">
+        <button class="nav-item active" type="button" data-section="main">Main Menu</button>
+        <button class="nav-item" type="button" data-section="digitalTwin">Digital Twin</button>
+        <button class="nav-item" type="button" data-section="atlas">In vivo/In vitro Atlas</button>
+        <button class="nav-item" type="button" data-section="earlyPancreas">Early Pancreas</button>
+        <button class="nav-item" type="button" data-section="endocrineExocrine">Endocrine-Exocrine</button>
+        <button class="nav-item" type="button" data-section="betaSic">Beta-SIC</button>
+        <button class="nav-item" type="button" data-section="alpha">Alpha</button>
+        <button class="nav-item" type="button" data-section="delta">Delta</button>
+        <button class="nav-item" type="button" data-section="dataSources">Data Sources</button>
+        <button class="nav-item" type="button" data-section="contact">Contact</button>
+        <button class="nav-item" type="button" data-section="citation">Citation</button>
+      </aside>
+
+      <div class="page-column">
+        <section class="content">
+          <section class="panel active" id="mainPanel" aria-labelledby="mainTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Main Menu</p>
+                <h2 id="mainTitle">Choose a dataset to explore</h2>
+              </div>
+            </div>
+            <div class="menu-grid" id="menuGrid"></div>
+          </section>
+
+          <section class="panel" id="datasetPanel" aria-labelledby="sectionTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow" id="sectionKind">Dataset</p>
+                <h2 id="sectionTitle">Dataset</h2>
+              </div>
+            </div>
+            <div class="notice" id="sectionNotice"></div>
+            <div id="datasetContent"></div>
+          </section>
+
+          <section class="panel" id="dataSourcesPanel" aria-labelledby="dataSourcesTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Resources</p>
+                <h2 id="dataSourcesTitle">Data Sources</h2>
+              </div>
+            </div>
+            <div class="notice visible">Data library and resources.</div>
+            <div class="resource-list" id="resourceList"></div>
+          </section>
+
+          <section class="panel" id="contactPanel" aria-labelledby="contactTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Contact</p>
+                <h2 id="contactTitle">Questions, feedback, or collaboration inquiries</h2>
+              </div>
+            </div>
+            <div class="contact-content" id="contactContent"></div>
+          </section>
+
+          <section class="panel" id="citationPanel" aria-labelledby="citationTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Citation</p>
+                <h2 id="citationTitle">Citation</h2>
+              </div>
+            </div>
+            <div class="citation-card">
+              <p>
+                Please acknowledge the use of our IsletTwin Explorer in your publications by citing the following
+                reference: Sanchez-Castro, E. E., Ishahak, M., Le, T., Maestas, M. M., Hernandez-Rincon, D. C.,
+                Mukherjee, N., ... & Millman, J. R. (2026). A digital twin of pancreatic islet differentiation
+                predicts cell fate. bioRxiv, 2026-04.
+                <a href="https://doi.org/10.64898/2026.04.27.721124" target="_blank" rel="noopener noreferrer">https://doi.org/10.64898/2026.04.27.721124</a>
+              </p>
+            </div>
+          </section>
+        </section>
+
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
